@@ -42,12 +42,13 @@ while (true)
     }
     else if (snakePos.X == 0 || snakePos.Y == 0 || snakePos.X == gridDimensions.X - 1 || snakePos.Y == gridDimensions.Y - 1 || snakePosHistory.Contains(snakePos))
     {
-        score = 0;
-        tailLength = 1;
-        snakePos = new Coord(10, 1);
-        snakePosHistory.Clear();
-        movementDirection = Direction.Down;
-        continue;
+        //score = 0;
+        //tailLength = 1;
+        //snakePos = new Coord(10, 1);
+        //snakePosHistory.Clear();
+        //movementDirection = Direction.Down;
+        //continue;
+        break;
     }
 
     snakePosHistory.Add(new Coord(snakePos.X, snakePos.Y));
@@ -79,4 +80,7 @@ while (true)
         }
     }
 }
+
+Console.WriteLine("Game over");
+Console.WriteLine("Your score is " + score);
 
